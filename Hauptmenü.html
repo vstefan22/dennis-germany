@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hauptmenü</title>
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+  <body>
+    <div id="main-menu-container">
+      <h1>Willkommen zum Lernspiel!</h1>
+      <p>Gib deinen Namen ein und starte das Spiel!</p>
+      <input type="text" id="player-name" placeholder="Gib deinen Namen ein" />
+      <button id="start-game">Spiel starten</button>
+      <a href="Willkommen.html">
+        <button id="view-rules">Spielregeln ansehen</button>
+      </a>
+    </div>
+
+    <!-- Spielfeld wird zunächst versteckt -->
+    <div id="spielfeld" style="display: none">
+      <h1 id="question"></h1>
+      <div id="choices"></div>
+    </div>
+
+    <!-- Ergebniscontainer -->
+    <div id="result" style="display: none">
+      <h2>Ergebnis</h2>
+      <p id="score">tester</p>
+      <button id="back-to-menu">Zurück zum Hauptmenü</button>
+    </div>
+
+    <audio id="audio" src="mouse-click.mp3"></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="eigenerCode.js"></script>
+  </body>
+</html>

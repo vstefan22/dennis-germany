@@ -1,0 +1,237 @@
+﻿/* Allgemeines Styling für den gesamten Text */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: url("hintergrund.png");
+  background-size: 1400px 700px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Überschriften Styling */
+h1,
+h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Container Styling */
+#main-menu-container,
+#spielfeld,
+#quiz,
+#result {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* Spielfeld Styling */
+#spielfeld {
+  width: 1000px;
+  height: auto;
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons Styling */
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button#start-game,
+button#view-rules,
+button#back-to-menu {
+  background-color: #63362f;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+button#start-game:hover,
+button#view-rules:hover,
+button#back-to-menu:hover {
+  background-color: #502720;
+}
+
+/* Styling für die Spielregeln-Seite */
+#rules-page {
+  background-color: rgba(255, 255, 255, 0.9); /* Weißer Kasten mit leichtem Durchschein-Effekt */
+  border-radius: 8px; /* Abgerundete Ecken */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Leichter Schatten für den 3D-Effekt */
+  max-width: 800px; /* Maximale Breite des Kastens */
+  margin: 40px auto; /* Zentriert die Box auf der Seite */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Überschrift auf der Spielregeln-Seite */
+#rules-page h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Styling für den Paragraph-Text */
+#rules-page p {
+  font-size: 18px;
+}
+
+/* Listen-Styling für die Spielregeln */
+#rules-page ul {
+  font-size: 18px;
+  list-style-type: disc; /* Punktierte Liste */
+  padding-left: 40px; /* Einrückung für die Liste */
+}
+
+/* Button Styling */
+#rules-page button,
+a button {
+  padding: 15px 30px;
+  background-color: #63362f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+}
+
+#rules-page button:hover,
+a button:hover {
+  background-color: #502720;
+}
+
+/* Antwort-Buttons */
+.choice {
+  padding: 15px;
+  background-color: #edcd95;
+  color: #000;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.choice:hover {
+  background-color: #d0b080;
+}
+
+/* Textfeld Styling */
+input[type="text"] {
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bildgröße */
+.question-image {
+  max-height: 300px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+/* Scoreboard Styling */
+#scoreboard {
+  margin-top: 30px;
+}
+
+#score-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#score-list li {
+  background-color: #f8f9fa;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Punktetabelle Styling */
+#score-table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#score-table th,
+#score-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#score-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#score-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#score-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* FLASH GREEN ON GOOD ANSWER */
+/* Animation */
+@keyframes flashGreen {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+/* Class to trigger animation */
+.flash-green {
+  animation: flashGreen 1s ease-out;
+}
+
+/* FLASH RED ON BAD ANSWER */
+/* Animation */
+@keyframes flashRed {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgb(128, 0, 0);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+/* Class to trigger animation */
+.flash-red {
+  animation: flashRed 1s ease-out;
+}
